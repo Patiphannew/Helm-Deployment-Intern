@@ -25,3 +25,11 @@ spec:
                 name: {{ .Values.helloworld.name }}-svc
                 port: 
                   number: {{ .Values.helloworld.servicePort }}
+                  
+          - path: {{ .Values.pgadmin.kong_path }}
+            pathType: {{ .Values.pgadmin.pathType }}
+            backend:
+              service:
+                name: {{ .Values.pgadmin.kong }}-svc
+                port: 
+                  number: {{ .Values.pgadmin.servicePort }}
