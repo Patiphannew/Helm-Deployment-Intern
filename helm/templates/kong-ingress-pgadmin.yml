@@ -4,8 +4,6 @@ metadata:
   name: {{ .Values.ingress.kong_pgadmin_ingress }}
   annotations:
     kubernetes.io/ingress.class: "kong"
-    sidecar.istio.io/inject: false
-    kuma.io/sidecar-injection: "disabled"
 spec:
   rules:
     - host: {{ .Values.ingress.host }}
